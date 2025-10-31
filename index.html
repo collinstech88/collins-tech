@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>collinstech - Programming Languages Portfolio</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Collins Tech - Explore, learn, and master the most in-demand programming languages to advance your career in tech">
+    <meta name="keywords" content="Collins Tech, Explore, learn, and master the most in-demand programming languages to advance your career in tech">
+    <meta name="author" content="GTC Ado-Soba">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Ndubisi-collins">
+    <meta property="og:description" content="Master the best languages in web development
+Explore, learn, and master the most in-demand programming languages to advance your career in tech">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://collins-tech.vercel.app/">
+    <meta property="og:image" content="https://collins-tech.vercel.app/favicon.png">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Collins-tech">
+    <meta name="twitter:description" content="Master the best languages in web development
+Explore, learn, and master the most in-demand programming languages to advance your career in tech">
+    <meta name="twitter:image" content="https://collins-tech.vercel.app/favicon.png">
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-purple: #040f2b;
+            --secondary-purple: #040f2b;
+            --light-purple: #040f2b;
+            --dark-purple: #240046;
+            --white: #ffffff;
+
+            --text-dark: #212529;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-gray);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary-purple), var(--secondary-purple));
+            color: var(--white);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .logo i {
+            margin-right: 0.5rem;
+            color: var(--light-purple);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav ul li a:hover {
+            color: var(--light-purple);
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--light-purple);
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-purple), var(--secondary-purple));
+            color: var(--white);
+            padding: 10rem 0 5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('about_img.png');
+            background-size: cover;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            animation: fadeInUp 1s ease 0.2s;
+            animation-fill-mode: both;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--white);
+            color: var(--primary-purple);
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid var(--white);
+            animation: fadeInUp 1s ease 0.4s;
+            animation-fill-mode: both;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Languages Section */
+        .languages {
+            padding: 5rem 0;
+            background-color: var(--white);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-purple);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary-purple);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: #6c757d;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .filter-btn {
+            background-color: var(--light-gray);
+            color: var(--text-dark);
+            border: none;
+            padding: 0.5rem 1.5rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background-color: var(--secondary-purple);
+            color: var(--white);
+        }
+
+        .languages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .language-card {
+            background-color: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            border: 1px solid #f0f0f0;
+        }
+
+        .language-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(106, 13, 173, 0.15);
+        }
+
+        .card-header {
+            background: linear-gradient(135deg);
+            padding: 1.5rem;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .card-header i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .card-body p {
+            margin-bottom: 1.5rem;
+            color: #6c757d;
+        }
+
+        .difficulty {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .difficulty span {
+            margin-right: 0.5rem;
+            font-weight: 500;
+        }
+
+        .difficulty-bar {
+            flex-grow: 1;
+            height: 8px;
+            background-color: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .difficulty-level {
+            height: 100%;
+            background-color: var(--secondary-purple);
+            border-radius: 4px;
+        }
+
+        .card-footer {
+            padding: 0 1.5rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: var(--light-purple);
+            color: var(--primary-purple);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .card-btn {
+            color: var(--primary-purple);
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .card-btn:hover {
+            color: var(--secondary-purple);
+        }
+
+        .card-btn i {
+            margin-left: 0.5rem;
+        }
+
+        /* About Section */
+        .about {
+            background-color: #f8f9fa;
+            padding: 5rem 0;
+            background-color: var();
+        }
+
+        .about-content {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            color: var(--primary-purple);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: #6c757d;
+        }
+
+        .about-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Contact Form */
+        .contact-container {
+            background-color: white;
+            gap: 50px;
+        }
+
+        .contact-form {
+            width: 50%;
+
+            border-radius: 10px;
+            margin-left: 25rem;
+
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #f39c12;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+
+
+        /* Footer */
+        footer {
+            background-color: #040f2b;
+            color: var(--white);
+            padding: 1rem 0 1rem;
+            text-align: center;
+            width:150% ;
+        }
+        
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .footer-logo {
+            flex: 1;
+            min-width: 300px;
+            margin-bottom: 2rem;
+        }
+
+        .footer-logo h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo p {
+            color: #c5cae9;
+            max-width: 300px;
+        }
+
+        .footer-links {
+            flex: 1;
+            min-width: 300px;
+            margin-bottom: 2rem;
+        }
+
+        .footer-links h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-links h4::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background-color: var(--secondary-purple);
+            bottom: -5px;
+            left: 0;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links ul li a {
+            color: #c5cae9;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links ul li a:hover {
+            color: var(--light-purple);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--secondary-purple);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #c5cae9;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                padding: 1rem 0;
+            }
+
+            nav ul {
+                margin-top: 1rem;
+            }
+
+            nav ul li {
+                margin: 0 0.8rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .about-content {
+                flex-direction: column;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+        /* form section */
+
+    form {
+      background: #fff;
+      padding: 2rem 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      width: 100%;
+      max-width: 400px;
+      margin-left: 20%;
+      animation: fadeIn 0.8s ease;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 1.2rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 0.4rem;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    input[type="email"]:focus,
+    textarea:focus {
+      border-color: #5563DE;
+      box-shadow: 0 0 6px rgba(85,99,222,0.4);
+      outline: none;
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    button {
+      width: 100%;
+      padding: 0.9rem;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #5563DE, #6E8EF7);
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #4A54D1, #5D73F2);
+      transform: translateY(-2px);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            margin-right: 90%;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: var(--section-padding);
+            margin-bottom: 6rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background-color: var(--light-color);
+            border-radius: 8px;
+            padding: 30px;
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 5rem;
+            color: rgba(26, 115, 232, 0.1);
+            font-family: Georgia, serif;
+        }
+
+        .testimonial-content {
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+
+        .author-info h4 {
+            margin-bottom: 5px;
+        }
+
+        .author-info p {
+            margin-bottom: 0;
+            color: var(--gray-color);
+        }
+
+        /* CTA Section */
+        .cta {
+            background-color: #040f2b;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            margin-bottom: 10rem;
+        }
+
+        .cta h2 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+        }
+
+        .cta .btn {
+            background-color: #040f2b;
+            color: var(--primary-color);
+        }
+
+        .cta .btn:hover {
+            background-color: white;
+            color: #040f2b;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa" style="color: white;"></i>
+                <span># collinstech</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#languages">Languages</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1>Master the best languages in web development</h1>
+            <p>Explore, learn, and master the most in-demand programming languages to advance your career in tech</p>
+            <a href="#languages" class="btn">Explore Languages</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>About collinstech</h3>
+                    <p>Hello my name is Ndubisi Collins i am a full stack developer i am passionate and self-driven
+                        developer and tech enthusiast with over 2 years of experience in bulding responsive websites,
+                        and base tech solutions. i specialize in front-end and i enjoy creatinng claen user-friendly,
+                        and functional digital experiences. </p>
+
+                    <a href="#" class="btn" style="background-color: #040f2b; color: white;">Join Me Now</a>
+                </div>
+                <div class="about-image">
+                    <img src="about_img.png" alt="Coding on a laptop">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section id="languages" class="languages">
+        <div class="container">
+            <div class="section-title">
+                <h2>What i offer</h2>
+                <p>Discover the most popular and in-demand languages that will boost your career in web development</p>
+            </div>
+
+
+            <div class="languages-grid">
+                <!-- HTML Card -->
+                <div class="language-card" data-category="web">
+                    <div class="card-header">
+                        <img src="html.png" alt="" width="40%">
+                        <h3 style="color: #040f2b;">HTML</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>The language of the web, essential for interactive websites and modern web structures.</p>
+                        <div>
+                            <i class="fas fa-star" style="color: yellow;"></i>
+                            <i class="fas fa-star" style="color: yellow;"></i>
+                            <i class="fas fa-star" style="color: yellow;"></i>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+
+                        <a href="#" class="card-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Python Card -->
+                <div class="language-card" data-category="web data">
+                    <div class="card-header">
+                        <img src="css.jpg" alt="" width="">
+                        <h3 style="color: #040f2b;">CSS</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>The beauty of the web and making it appealing to the human eyes .</p>
+                        <div>
+                            <i class="fas fa-star" style="color: yellow;"></i>
+                            <i class="fas fa-star" style="color: yellow;"></i>
+                            <i class="fas fa-star" style="color: yellow;"></i>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                       
+                        <a href="#" class="card-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="language-card" data-category="web data">
+                    <div class="card-header">
+                        <img src="python.jpg" alt="" width="35%">
+                        <h3 style="color: #040f2b;">Python</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Versatile language perfect for beginners, data science, AI, and backend development.</p>
+                        <div>
+                            <i class="fas fa-star" style="color: yellow;"></i>
+                            <i class="fas fa-star" style="color: yellow;"></i>
+                            <i class="fas fa-star" style="color: yellow;"></i>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                       
+                        <a href="#" class="card-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What my learners say</h2>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>collinstech transformed my career. The practical approach to teaching and real-world projects
+                            helped me land my dream job as a web developer.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <i class="fa fa-user"></i>
+                        <div class="author-info">
+                            <h4>Oganyia Eze Richard</h4>
+                            <p>Web Developer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>The web development program on collinstech is top-notch. The instructors are industry experts
+                            who provide insights you won't find in textbooks.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <i class="fa fa-user"></i>
+                        <div class="author-info">
+                            <h4>Praise</h4>
+                            <p>Web Developer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>I came collinstech website with no programming experience. Six months later, I'm a confident
+                            Python developer working on AI projects.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <i class="fa fa-user"></i>
+                        <div class="author-info">
+                            <h4>Favour</h4>
+                            <p>Web Developer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Start Your web development Journey?</h2>
+            <p>Join thousands of developers who have transformed their careers with collinstech.</p>
+            <a href="#contact" class="btn">Apply Now</a>
+        </div>
+    </section>
+
+    <div class="contact-container" id="contact">
+
+        <div class="contact-form">
+            <div class="section-title">
+                <h2 style="margin-bottom: 2rem;">Contact Me</h2>
+                <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+
+                </p>
+            </div>
+            <!-- form section -->
+            <!-- modify this form HTML and place wherever you want your form -->
+<form
+  action="https://formspree.io/f/mgvyjdor"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
+
+<!-- Read the Formbutton docs at formspree.io/formbutton/docs. See more examples at codepen.io/formspree -->
+<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+<script>
+  /* paste this line in verbatim */
+  window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+  /* customize formbutton below*/     
+  formbutton("create", {
+    action: "https://formspree.io/f/mgvyjdor",
+    title: "How can we help?",
+    fields: [
+      { 
+        type: "email", 
+        label: "Email:", 
+        name: "email",
+        required: true,
+        placeholder: "your@email.com"
+      },
+      {
+        type: "textarea",
+        label: "Message:",
+        name: "message",
+        placeholder: "What's on your mind?",
+      },
+      { type: "submit" }      
+    ],
+    styles: {
+      title: {
+        backgroundColor: "gray"
+      },
+      button: {
+        backgroundColor: "gray"
+      }
+    }
+  });
+</script>
+        </div>
+        <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/2347039653816?text=Hello" class="whatsapp-float" target="_blank"> 
+    <i class="fab fa-whatsapp"> 
+  </a>
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <h3><i class=""></i># collinstech</h3>
+                        <p>Your journey to programming mastery starts here. Learn, code, and grow with collinstech.</p>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#languages">Languages</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#">Resources</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+
+                <div class="copyright">
+                    <p>&copy; 2023 collinstech. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            // Filter functionality
+            document.addEventListener('DOMContentLoaded', function () {
+                const filterButtons = document.querySelectorAll('.filter-btn');
+                const languageCards = document.querySelectorAll('.language-card');
+
+                filterButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        // Remove active class from all buttons
+                        filterButtons.forEach(btn => btn.classList.remove('active'));
+                        // Add active class to clicked button
+                        button.classList.add('active');
+
+                        const filter = button.getAttribute('data-filter');
+
+                        languageCards.forEach(card => {
+                            if (filter === 'all') {
+                                card.style.display = 'block';
+                            } else {
+                                if (card.getAttribute('data-category').includes(filter)) {
+                                    card.style.display = 'block';
+                                } else {
+                                    card.style.display = 'none';
+                                }
+                            }
+                        });
+                    });
+                });
+
+                // Smooth scrolling for navigation links
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+
+                        const targetId = this.getAttribute('href');
+                        const targetElement = document.querySelector(targetId);
+
+                        if (targetElement) {
+                            window.scrollTo({
+                                top: targetElement.offsetTop - 80,
+                                behavior: 'smooth'
+                            });
+                        }
+                    });
+                });
+            });
+        </script>
+</body>
+
+</html>
