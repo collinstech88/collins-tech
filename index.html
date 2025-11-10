@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+a<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,22 +9,22 @@
     <meta name="description"
         content="Collins Tech - Explore, learn, and master the most in-demand programming languages to advance your career in tech">
     <meta name="keywords" content="Collins Tech, Explore, learn, and master the most in-demand programming languages to advance your career in tech">
-    <meta name="author" content="collins tech">
+    <meta name="author" content="GTC Ado-Soba">
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Ndubisi-collins">
     <meta property="og:description" content="Master the best languages in web development
 Explore, learn, and master the most in-demand programming languages to advance your career in tech">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://collins-tech-beta.vercel.app/">
-    <meta property="og:image" content="https://collins-tech-beta.vercel.app/favicon.png">
+    <meta property="og:url" content="https://collins-tech.vercel.app/">
+    <meta property="og:image" content="https://collins-tech.vercel.app/favicon.png">
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Collins-tech">
     <meta name="twitter:description" content="Master the best languages in web development
 Explore, learn, and master the most in-demand programming languages to advance your career in tech">
-    <meta name="twitter:image" content="https://collins-tech-beta.vercel.app/favicon.png">
+    <meta name="twitter:image" content="https://collins-tech.vercel.app/favicon.png">
 
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -452,11 +452,9 @@ Explore, learn, and master the most in-demand programming languages to advance y
         footer {
             background-color: #040f2b;
             color: var(--white);
-            padding: 1rem 0 1rem;
+            padding: 3rem 0 1rem;
             text-align: center;
-            width:150% ;
         }
-        
 
         .footer-content {
             display: flex;
@@ -597,70 +595,68 @@ Explore, learn, and master the most in-demand programming languages to advance y
                 flex-direction: column;
             }
         }
-        /* form section */
+ /* Responsive Design */
+        @media (max-width: 543px){
+              /* Contact Form */
+        .contact-container {
+            background-color: white;
+           
+        }
+.contact-form {
+            width: 50%;
 
-    form {
-      background: #fff;
-      padding: 2rem 2.5rem;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-      width: 100%;
-      max-width: 400px;
-      margin-left: 20%;
-      animation: fadeIn 0.8s ease;
-    }
+            border-radius: 10px;
+            margin-left: 3.3rem;
 
-    label {
-      display: block;
-      margin-bottom: 1.2rem;
-      font-weight: 600;
-      color: #333;
-    }
+        }
+.contact-form h2{
+    width: 20rem;
+    margin-left: 0rem;
+}
+        
+   .contact-form p{
+    width: 20rem;
+    text-align: center;
+    margin-right: 20rem;
+}  
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+            font-weight: 600;
+            font-size: 1rem;
+        }
 
-    input[type="email"],
-    textarea {
-      width: 100%;
-      padding: 0.75rem;
-      margin-top: 0.4rem;
-      border: 2px solid #ccc;
-      border-radius: 8px;
-      font-size: 1rem;
-      transition: border-color 0.3s, box-shadow 0.3s;
-    }
+        .form-group input,
+        .form-group textarea {
+            width: 150%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
 
-    input[type="email"]:focus,
-    textarea:focus {
-      border-color: #5563DE;
-      box-shadow: 0 0 6px rgba(85,99,222,0.4);
-      outline: none;
-    }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #f39c12;
+        }
 
-    textarea {
-      min-height: 100px;
-      resize: vertical;
-    }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
 
-    button {
-      width: 100%;
-      padding: 0.9rem;
-      border: none;
-      border-radius: 8px;
-      background: linear-gradient(135deg, #5563DE, #6E8EF7);
-      color: white;
-      font-size: 1rem;
-      font-weight: bold;
-      cursor: pointer;
-    }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
 
-    button:hover {
-      background: linear-gradient(135deg, #4A54D1, #5D73F2);
-      transform: translateY(-2px);
-    }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+        }
+
         /* WhatsApp Button */
         .whatsapp-float {
             position: fixed;
@@ -668,7 +664,6 @@ Explore, learn, and master the most in-demand programming languages to advance y
             height: 60px;
             bottom: 40px;
             right: 40px;
-            margin-right: 90%;
             background-color: #25d366;
             color: #FFF;
             border-radius: 50px;
@@ -687,29 +682,6 @@ Explore, learn, and master the most in-demand programming languages to advance y
             background-color: #128C7E;
             transform: scale(1.1);
         }
-        @media (max-width: 507px){
-  .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 40px;
-            right: 40px;
-            margin-right: 19rem;
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-  }
-      
 
         /* Testimonials Section */
         .testimonials {
@@ -797,22 +769,6 @@ Explore, learn, and master the most in-demand programming languages to advance y
             background-color: white;
             color: #040f2b;
         }
-        @media (max-width: 507px){
- /* Header Styles */
-           footer {
-            background-color: #040f2b;
-            color: var(--white);
-            padding: 1rem 0 1rem;
-            text-align: center;
-            width:139.2% ;
-        }
-        .footer-logo p {
-            color: #c5cae9;
-            max-width: 300px;
-            
-        }
-  }
-      
     </style>
 </head>
 
@@ -1000,48 +956,58 @@ Explore, learn, and master the most in-demand programming languages to advance y
         </div>
     </section>
 
-   
-<!-- Read the Formbutton docs at formspree.io/formbutton/docs. See more examples at codepen.io/formspree -->
-<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
-<script>
-  /* paste this line in verbatim */
-  window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
-  /* customize formbutton below*/     
-  formbutton("create", {
-    action: "https://formspree.io/f/mgvyjdor",
-    title: "How can we help?",
-    fields: [
-      { 
-        type: "email", 
-        label: "Email:", 
-        name: "email",
-        required: true,
-        placeholder: "your@email.com"
-      },
-      {
-        type: "textarea",
-        label: "Message:",
-        name: "message",
-        placeholder: "What's on your mind?",
-      },
-      { type: "submit" }      
-    ],
-    styles: {
-      title: {
-        backgroundColor: "gray"
-      },
-      button: {
-        backgroundColor: "gray"
-      }
-      
-    }
-  });
-</script>
+    <div class="contact-container" id="contact">
+
+        <div class="contact-form">
+            <div class="section-title">
+                <h2 style="margin-bottom: 2rem;">Contact Me</h2>
+                <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+
+                </p>
+            </div>
+
+            <form action="https://formspree.io/f/mgvyjdor" method="post">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" placeholder="First Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" placeholder="Last Name" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" placeholder="Your Phone Number" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" placeholder="Subject" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" placeholder="Your Message" required></textarea>
+                </div>
+
+                <button type="submit" style="background-color: #040f2b; margin-bottom: 2rem; color: white;"
+                    class="btn">Send Message</button>
+            </form>
         </div>
+
         <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/2347039653816?text=Hello" class="whatsapp-float" target="_blank"> 
-    <i class="fab fa-whatsapp"> 
-  </a>
+        <a href="https://wa.me/2347039653816?text=Hello" class="whatsapp-float" target="_blank" title="Chat with me on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
         <!-- Footer -->
         <footer>
             <div class="container">
@@ -1134,4 +1100,3 @@ Explore, learn, and master the most in-demand programming languages to advance y
 </body>
 
 </html>
-
